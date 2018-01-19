@@ -1,15 +1,19 @@
 import React from 'react';
 import './AnswerOptions.css';
 
+import Input from '../Input/Input'
+
 const AnswerOptions = (props) => {
     const renderOptions = props.options.map((opt) => {
         return (
             <li key={opt.content}>
-                <input type="radio"
+                <Input type={props.multi}
                     className="Option-value"
                     name={props.content}
+                    text={opt.content}
+                    multi={props.multi}
                 />
-                <label htmlFor={props.content}>{opt.content}</label>
+                
                 
             </li>
         )

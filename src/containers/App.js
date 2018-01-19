@@ -26,7 +26,7 @@ class App extends Component {
             good: false
           }
         ],
-        multi: false
+        multi: true
       }
     ]
   }
