@@ -1,0 +1,13 @@
+.Question {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 1rem 4rem rgba(0,0,0, .15);
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.Multi-msg {
+    font-size: 0.9rem;
+    color: #777;
+}

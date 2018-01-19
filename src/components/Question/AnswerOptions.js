@@ -12,9 +12,7 @@ const AnswerOptions = (props) => {
                     name={props.content}
                     text={opt.content}
                     multi={props.multi}
-                />
-                
-                
+                />                
             </li>
         )
     })
