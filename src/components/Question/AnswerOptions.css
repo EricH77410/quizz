@@ -1,7 +1,21 @@
 .Answer-Options {
-
+    list-style: none;
 }
 
-.Answer-Options ul {
-    list-style: none;
+.Answer-Item {
+    padding: 15px;
+}
+
+input {
+    margin-right: 30px;
+}
+
+.multi {
+    margin-right: 30px;
+}
+
+.Answer-Main {
+    border: 1px solid #999;
+    margin: 10px 0;
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .15);
 }
