@@ -7,12 +7,13 @@ const AnswerOptions = (props) => {
     const renderOptions = props.options.map((opt) => {
         return (
             <li className="Answer-Item" key={opt.content}>
-                <Input type={props.multi}
+                <Input 
+                    multi={props.multi}
                     className="Option-value"
                     name={props.content}
                     text={opt.content}
-                    multi={props.multi}
                     change={props.change}
+                    id={props.id}
                 />                
             </li>
         )

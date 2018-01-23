@@ -4,10 +4,16 @@
 
 .Answer-Item {
     padding: 15px;
+    cursor: pointer;    
+}
+
+.Answer-Item Label {
+    cursor: pointer;
 }
 
 input {
     margin-right: 30px;
+    cursor: pointer;
 }
 
 .multi {

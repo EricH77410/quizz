@@ -6,13 +6,13 @@ const Input = (props) => {
     if (props.multi) {
         element = <input className="multi" type="checkbox" name={props.name} onChange={props.change} id={props.text} />
     } else {
-        element = <input className="single" type="radio" name={props.name} onChange={props.change} id={props.text} value={false}/>
+        element = <input className="single" type="radio" name={props.id} onChange={props.change} id={props.text} value={props.text} />
     }
-    
+
     return (
         <div>
             {element}
-            <label htmlFor={props.name}>{props.text}</label>
+            <label htmlFor={props.text}>{props.text}</label>
         </div>
     )
 }

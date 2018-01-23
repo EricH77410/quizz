@@ -13,7 +13,7 @@ const Question = (props) => {
             </div>            
             
             <div className="Options">
-                <AnswerOptions options={props.options} multi={props.multi} content={props.content} change={props.onItemChanged}/>
+                <AnswerOptions options={props.options} multi={props.multi} content={props.content} change={props.onItemChanged} id={props.id} answer={props.answer}/>
             </div>
 
             <div className="action">

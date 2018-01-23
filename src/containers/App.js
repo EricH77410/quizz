@@ -6,6 +6,8 @@ import Question from '../components/Question/Question';
 import Count from '../components/Count/Count';
 import Results from '../components/Results/Results';
 
+let compo = null;
+
 class App extends Component {
   state = {
     questions:Questions,
@@ -15,7 +17,8 @@ class App extends Component {
     nbGoog:0
   }
 
-  onSubmitAnswer = () => {
+  onSubmitAnswer = (it) => {
+    console.log(it.target)
     const answers = [...this.state.answers]
     let questionAnswer = {};
     questionAnswer.id = this.state.actual;
@@ -25,23 +28,26 @@ class App extends Component {
     
     if (this.state.actual < this.state.questions.length-1) {
       this.setState({actual: this.state.actual + 1})
+      compo = null;
     } else {
       this.setState({completed: true}, ()=>{
         this.getResults()
       })      
     }
+
   }
 
   onItemChanged = (it) => {
-    let answer = null
-    if (this.state.questions[this.state.actual].multi){
-      answer.push(it.target.id);
-    } else {
-      answer = it.target.id
-    }
-    const questions = [...this.state.questions];
-    questions[this.state.actual].answer = answer;
-    this.setState({questions});
+     let answer = null
+     if (this.state.questions[this.state.actual].multi){
+       answer.push(it.target.id);
+     } else {
+       answer = it.target.id
+     }
+     const questions = [...this.state.questions];
+     questions[this.state.actual].answer = answer;
+     this.setState({questions});
+     //it.target.checked=false;
   }
 
   getResults = () => {
@@ -54,26 +60,28 @@ class App extends Component {
         }
       }
     }
-    console.log('Good : ',good_answers)
-    console.log('Answer : ', this.state.answers)
     for (let i in this.state.answers){
       if (this.state.answers[i].answer === good_answers[i]){
         good++;
       }
     }
-    console.log(good)
     this.setState({nbGoog: good})
   }
 
   render() {
-    let compo = (
+    console.log(compo);
+    compo = (
+      <div className="Questions">
       <Question 
             content={this.state.questions[this.state.actual].content} 
             options={this.state.questions[this.state.actual].options} 
             multi={this.state.questions[this.state.actual].multi}
             clicked={this.onSubmitAnswer}
             onItemChanged={this.onItemChanged}
+            id={this.state.actual}
+            answer={this.state.questions[this.state.actual].answer}
           />
+      </div>
     )
 
     if (this.state.completed) {
@@ -84,10 +92,10 @@ class App extends Component {
       <div className="container">
         <h1 className="App">Quizz</h1>
         <Count count={this.state.actual+1} total={this.state.questions.length}/>
-        <div className="Questions">
+        
           {compo}
         </div>
-      </div>
+      
     );
   }
 }

@@ -1,6 +1,6 @@
 export default [
     {
-        content: 'Quel est le nom du partage de la BDD',
+        content: 'Quel est le nom du partage de la BDD ?',
         options: [
           {
             content: 'CS Data Trophy Gestion',
@@ -23,7 +23,7 @@ export default [
         answer: null
       },
       {
-        content: "Combien de logiciel d'imagerie peut-on paramètrer",
+        content: "Combien de logiciel d'imagerie peut-on paramètrer ?",
         options: [
           {
             content: '1',
@@ -61,14 +61,14 @@ export default [
         answer: null
       },
       {
-        content: "Lors de l’installation d’une mise à jour majeure (DVD), est-il nécessaire d’insérer le DVD sur les postes « client » afin de procéder à l’installation",
+        content: "Lors de l’installation d’une mise à jour majeure (DVD), il est nécessaire d’insérer le DVD sur les postes « client » afin de procéder à l’installation",
         options: [
           {
-            content: 'Oui',
+            content: 'Vrai',
             good: false
           },
           {
-            content: 'Non',
+            content: 'Faux',
             good: true
           }
         ],
@@ -125,14 +125,14 @@ export default [
         answer: null
       },
       {
-        content: "Lorsque le cabinet a besoin d’une connexion utilisateur supplémentaire est-il nécessaire de réaliser une commande au préalable ? ",
+        content: "Lorsque le cabinet a besoin d’une connexion utilisateur supplémentaire est-il nécessaire de réaliser une commande au préalable ?",
         options: [
           {
-            content: 'Oui',
+            content: 'Vrai',
             good: true
           },
           {
-            content: 'Non',
+            content: 'Faux',
             good: false
           }
         ],
@@ -155,14 +155,14 @@ export default [
         answer: null
       },
       {
-        content: "CS Trophy Gestion offre t il la possibilité d’envoyer des SMS pour rappeler les rdv aux patients ?",
+        content: "CS Trophy Gestion offre la possibilité d’envoyer des SMS pour rappeler les rdv aux patients",
         options: [
           {
-            content: 'Oui',
+            content: 'Vrai',
             good: true
           },
           {
-            content: 'Non',
+            content: 'Faux',
             good: false
           }
         ],
@@ -193,14 +193,14 @@ export default [
         answer: null
       },
       {
-        content: "CS Trophy Gestion propose t il une assistance au codage CCAM ?",
+        content: "CS Trophy Gestion propose une assistance au codage CCAM",
         options: [
           {
-            content: 'Oui',
+            content: 'Vrai',
             good: true
           },
           {
-            content: 'Non',
+            content: 'Faux',
             good: false
           }
         ],
